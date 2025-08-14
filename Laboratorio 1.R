@@ -54,3 +54,4 @@ barplot(gastos_ordenados,
         names.arg = names(gastos_ordenados),
         col = "purple")
 
+# Terminado
