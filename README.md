@@ -13,3 +13,4 @@ Material del curso de posgrado de Experimentación y Métodos Estadísticos en M
  + Aprendiendo funciones
  + Creando gráficas
  + Modificando gráficas
+ + Base de datos de Temperatura csv a R
