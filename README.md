@@ -15,6 +15,9 @@ Material del curso de posgrado de Experimentación y Métodos Estadísticos en M
  + Modificando gráficas
  + Base de datos de Temperatura csv a R
  
- **Semana 3**
+ **Semana 3** (21/08/2025) : Laboratorio 2 :joy:
+ + Cargamos base de datos de la web
+ + Hacemos boxplot y la personalizamos con la base de datos de Temperatura
+ + Aprendimos a compliar en HTML y PDF
  
 
