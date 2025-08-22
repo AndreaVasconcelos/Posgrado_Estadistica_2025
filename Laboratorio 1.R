@@ -1,3 +1,9 @@
+# Andrea Michelle Luna Vasconcelos 1950889
+# Semana 2 (14/08/2025)
+
+## Laboratorio 1
+# Primer contacto con RStudio
+
 300+240+1527+400+1500+1833
 celular <- 300
 celular

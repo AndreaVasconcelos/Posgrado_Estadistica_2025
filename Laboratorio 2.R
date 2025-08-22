@@ -1,6 +1,5 @@
-# Andrea Michelle Luna Vasconcelos
-# 21/08/2025
-# Semana 3
+# Andrea Michelle Luna Vasconcelos 1950889
+# Semana 3 (21/08/2025)
 
 
 # Importar datos web ------------------------------------------------------

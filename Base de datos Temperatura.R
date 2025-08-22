@@ -1,8 +1,8 @@
-# Andrea Michelle Luna Vasconcelos
-# 14/08/2025
-# Semana 2
+# Andrea Michelle Luna Vasconcelos 1950889
+# Semana 2 (14/08/2025)
 
-# Laboratorio 2
+
+## Laboratorio 2
 
 temperatura <- read.csv("C:/Repositorio GitHub/Posgrado_Estadistica_2025/temperatura.csv")
 View(temperatura)
