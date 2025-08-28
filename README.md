@@ -22,7 +22,11 @@ Material del curso de posgrado de Experimentación y Métodos Estadísticos en M
  + Vimos gráficas, específicamente boxplot y la personalizamos (con la base de datos de Temperatura)
  + Aprendimos a compliar en HTML y PDF
  
- **Semana 4** (28/08/2025) : 
- + 
+ **Semana 4** (28/08/2025) : Script 4 🤠🍳
+ + Bajamos la base de datos de Calidad de Planta
+ + Cargamos a RStudio y hacemos un boxplot personalizado📊
+ + Sufrimos pero se logró
+ + Terminar pruebas de T
+ + Compliar 
  
 
