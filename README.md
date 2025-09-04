@@ -27,6 +27,10 @@ Material del curso de posgrado de Experimentación y Métodos Estadísticos en M
  + Cargamos a RStudio y hacemos un boxplot personalizado📊
  + Sufrimos pero se logró
  + Terminar pruebas de T
- + Compliar 
+ + Compliar
+ 
+ **Semana 5** (04/09/2025) : 🤯😬😵
+ + Media móvil
+ + Ejemplos de prueba de T de muestras dependientes, independientes y de una muestra.
  
 
