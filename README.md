@@ -29,8 +29,22 @@ Material del curso de posgrado de Experimentación y Métodos Estadísticos en M
  + Terminar pruebas de T
  + Compliar
  
- **Semana 5** (04/09/2025) : 🤯😬😵
+ **Semana 5** (04/09/2025) : Pruebas de T 🤯😬😵
  + Media móvil
  + Ejemplos de prueba de T de muestras dependientes, independientes y de una muestra.
+ 
+ **Semana 6** (11/09/2025) : Laboratorio en Teams ✈️
+ + No clase presencial pero tuvimos laboratorio 
+ + Tarea/laboratorio
+ 
+ **Semana 7** (18/09/2025) : Análisis de varianzas 🫥🚀👾
+ + ANOVA
+ + CROP (varianza entre medias)
+ + Gráfica de violín
+ 
+ **Semana 8** (25/09/2025) : Última semana Dr. Tagle
+ 
+ **Examen** (buscar fecha)
+ 
  
 
