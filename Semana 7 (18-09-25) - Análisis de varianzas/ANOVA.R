@@ -1,5 +1,5 @@
 # Andrea Michelle Luna Vasoncelos 1950889
-# Análisis de varianza-Script 8
+# Análisis de varianza-Script 8?
 # Productividad de los cultivos
 # 18/0972025
 
@@ -98,21 +98,21 @@ summary(crop.aov) # es altamente diferente entre medias
 
 #**Posibilidad 1**
 # H0 = M1 = M2
-# H1 = M1 =/ M2
+# H1 = M1 ≠ M2
 
 #**Posibilidad 2**
 # H0 = M2 = M3
-# H1 = M2 =/ M3
+# H1 = M2 ≠ M3
 
 #**Posibilidad 3**
 # H0 = M1 = M3
-# H1 = M1 =/ M3
+# H1 = M1 ≠ M3
 
 qt(0.975, 93)
 
 sqrt((2*0.3859)/32)*qt(0.975, 93)
 # = **0.3083992** este es el valor mínimo que debe haber entre medias para que sean diferentes
-# = 300 kg
+
 
 tapply(crop$yield, crop$fertilizer, mean)
 # diferencia de medias F1 vs F2
@@ -129,8 +129,8 @@ tapply(crop$yield, crop$fertilizer, mean)
 # Prueba de Tukey ---------------------------------------------------------
 
 # qtukey(0.95, means = 3, df = 93)
-sqrt((2*0.3859)/32)*qtukey(0.95, nmeans = 3, df = 93)
-# = **0.5231185** este es el valor mínimo que debe haber entre medias para que sean diferentes
+sqrt((0.3859)/32)*qtukey(0.95, nmeans = 3, df = 93)
+# = **0.3699006** este es el valor mínimo que debe haber entre medias para que sean diferentes
 # = 500 kg
 
 # Con Tukey me diría que solo el F1 vs F3 tienen diferencia significativa

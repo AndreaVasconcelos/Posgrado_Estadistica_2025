@@ -1,11 +1,11 @@
 # Posgrado_Estadistica_2025
 Material del curso de posgrado de Experimentación y Métodos Estadísticos en MCF y DCMRN.
 
- **Andrea Luna Vasconcelos 1950889**
+ **Andrea Michelle Luna Vasconcelos 1950889**
 
 ## Contenido del curso
 
-**Semana 1** (07/08/2025): Inicio del curso :fire:🚀
+ **Semana 1** (07/08/2025): Inicio del curso :fire:🚀
  + Crear repositorio
  + Sincronizar nube y computadora
  + Credenciales Git
@@ -15,32 +15,36 @@ Material del curso de posgrado de Experimentación y Métodos Estadísticos en M
  + Aprendiendo funciones
  + Creando gráficas
  + Modificando gráficas
- + Base de datos de Temperatura csv a R
+ + Inicio Laboratorio 2
+ + Base de datos de Temperatura de csv a R
  
  **Semana 3** (21/08/2025) : Laboratorio 2 😓🤯
- + Cargamos base de datos de la web
- + Vimos gráficas, específicamente boxplot y la personalizamos (con la base de datos de Temperatura)
+ + Cargar base de datos de la web (base de datos Senasica)
+ + Creación de gráficas, específicamente boxplot personalizada (con la base de datos Temperatura)
  + Aprendimos a compliar en HTML y PDF
+ + Continuación y final de Laboratorio 2
  
  **Semana 4** (28/08/2025) : Script 4 🤠🍳
- + Bajamos la base de datos de Calidad de Planta
- + Cargamos a RStudio y hacemos un boxplot personalizado📊
- + Sufrimos pero se logró
- + Terminar pruebas de T
- + Compliar
+ + Base de datos Calidad de Planta
+ + Creación de boxplot personalizado📊
+ + Pruebas de T
+ + Cohen´s effect
  
  **Semana 5** (04/09/2025) : Pruebas de T 🤯😬😵
  + Media móvil
  + Ejemplos de prueba de T de muestras dependientes, independientes y de una muestra.
+ + Asignación 3: Contraste de medias 
+ + Trabajar con la base de datos Iris
  
- **Semana 6** (11/09/2025) : Laboratorio en Teams ✈️
- + No clase presencial pero tuvimos laboratorio 
- + Tarea/laboratorio
+ **Semana 6** (11/09/2025) :  ✈️
+ + 
+ + 
  
  **Semana 7** (18/09/2025) : Análisis de varianzas 🫥🚀👾
  + ANOVA
- + CROP (varianza entre medias)
- + Gráfica de violín
+ + Base de datos CROP (varianza entre medias)
+ + Aprender a crear una Gráfica de violín
+ + Tarea: Comparación entre medias de concentración de estroncio en 5 lagos.
  
  **Semana 8** (25/09/2025) : Última semana Dr. Tagle
  

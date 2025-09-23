@@ -1,0 +1,716 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\Large\bfseries\centering}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries\centering}{\thesubsection}{1em}{}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Comparación de concentraciones de estroncio en cuerpos de agua},
+  pdfauthor={Andrea Michelle Luna Vasconcelos -- 1950889},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Comparación de concentraciones de estroncio en cuerpos de agua}
+\author{Andrea Michelle Luna Vasconcelos -- 1950889}
+\date{22/09/2025}
+
+\begin{document}
+\maketitle
+
+\subsection{Descripción de los datos}\label{descripciuxf3n-de-los-datos}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{estroncio }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"C:/Repositorio GitHub/Posgrado\_Estadistica\_2025/Tarea 22\_09/Estroncio mg\_ml.csv"}\NormalTok{)}
+\FunctionTok{library}\NormalTok{(knitr)}
+\FunctionTok{kable}\NormalTok{(}\FunctionTok{head}\NormalTok{(estroncio), }\AttributeTok{caption =} \StringTok{"Concentración de estroncio (mg/ml) en cinco cuerpos de agua (n = 6)"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1067}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2000}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1600}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1867}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2000}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1467}}@{}}
+\caption{Concentración de estroncio (mg/ml) en cinco cuerpos de agua (n
+= 6)}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedleft
+Muestra
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Grayson.s.Pond
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Beaver.Lake
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Angler.s.Cove
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Appletree.Lake
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Rock.River
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedleft
+Muestra
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Grayson.s.Pond
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Beaver.Lake
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Angler.s.Cove
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Appletree.Lake
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Rock.River
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & 28.2 & 39.6 & 46.3 & 41.0 & 56.3 \\
+2 & 33.2 & 40.8 & 42.1 & 44.1 & 54.1 \\
+3 & 36.4 & 37.9 & 43.5 & 46.4 & 59.4 \\
+4 & 34.6 & 37.1 & 48.8 & 40.2 & 62.7 \\
+5 & 29.1 & 43.6 & 43.7 & 38.6 & 60.0 \\
+6 & 31.0 & 42.4 & 40.1 & 36.3 & 57.3 \\
+\end{longtable}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+
+\NormalTok{estroncio\_long }\OtherTok{\textless{}{-}}\NormalTok{ estroncio }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{pivot\_longer}\NormalTok{(}\AttributeTok{cols =} \SpecialCharTok{{-}}\NormalTok{Muestra,}
+               \AttributeTok{names\_to =} \StringTok{"Cuerpo\_agua"}\NormalTok{,}
+               \AttributeTok{values\_to =} \StringTok{"Concentracion"}\NormalTok{)}
+
+\NormalTok{estroncio\_long}\SpecialCharTok{$}\NormalTok{Cuerpo\_agua }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(estroncio\_long}\SpecialCharTok{$}\NormalTok{Cuerpo\_agua)}
+
+\FunctionTok{kable}\NormalTok{(estroncio\_long, }\AttributeTok{caption =} \StringTok{"Datos reorganizados de concentraciones de estroncio (mg/ml) en cinco cuerpos de agua como factor"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}rlr@{}}
+\caption{Datos reorganizados de concentraciones de estroncio (mg/ml) en
+cinco cuerpos de agua como factor}\tabularnewline
+\toprule\noalign{}
+Muestra & Cuerpo\_agua & Concentracion \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Muestra & Cuerpo\_agua & Concentracion \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & Grayson.s.Pond & 28.2 \\
+1 & Beaver.Lake & 39.6 \\
+1 & Angler.s.Cove & 46.3 \\
+1 & Appletree.Lake & 41.0 \\
+1 & Rock.River & 56.3 \\
+2 & Grayson.s.Pond & 33.2 \\
+2 & Beaver.Lake & 40.8 \\
+2 & Angler.s.Cove & 42.1 \\
+2 & Appletree.Lake & 44.1 \\
+2 & Rock.River & 54.1 \\
+3 & Grayson.s.Pond & 36.4 \\
+3 & Beaver.Lake & 37.9 \\
+3 & Angler.s.Cove & 43.5 \\
+3 & Appletree.Lake & 46.4 \\
+3 & Rock.River & 59.4 \\
+4 & Grayson.s.Pond & 34.6 \\
+4 & Beaver.Lake & 37.1 \\
+4 & Angler.s.Cove & 48.8 \\
+4 & Appletree.Lake & 40.2 \\
+4 & Rock.River & 62.7 \\
+5 & Grayson.s.Pond & 29.1 \\
+5 & Beaver.Lake & 43.6 \\
+5 & Angler.s.Cove & 43.7 \\
+5 & Appletree.Lake & 38.6 \\
+5 & Rock.River & 60.0 \\
+6 & Grayson.s.Pond & 31.0 \\
+6 & Beaver.Lake & 42.4 \\
+6 & Angler.s.Cove & 40.1 \\
+6 & Appletree.Lake & 36.3 \\
+6 & Rock.River & 57.3 \\
+\end{longtable}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{medias }\OtherTok{\textless{}{-}} \FunctionTok{tapply}\NormalTok{(estroncio\_long}\SpecialCharTok{$}\NormalTok{Concentracion, estroncio\_long}\SpecialCharTok{$}\NormalTok{Cuerpo\_agua, mean)}
+\FunctionTok{kable}\NormalTok{(medias, }\AttributeTok{caption =} \StringTok{"Medias de concentración de estroncio (mg/ml) por cuerpo de agua"}\NormalTok{,}
+      \AttributeTok{col.names =} \FunctionTok{c}\NormalTok{(}\StringTok{"Cuerpo de agua"}\NormalTok{, }\StringTok{"Media (mg/ml)"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}lr@{}}
+\caption{Medias de concentración de estroncio (mg/ml) por cuerpo de
+agua}\tabularnewline
+\toprule\noalign{}
+Cuerpo de agua & Media (mg/ml) \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Cuerpo de agua & Media (mg/ml) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Angler.s.Cove & 44.08333 \\
+Appletree.Lake & 41.10000 \\
+Beaver.Lake & 40.23333 \\
+Grayson.s.Pond & 32.08333 \\
+Rock.River & 58.30000 \\
+\end{longtable}
+
+\subsection{Hipótesis del ANOVA}\label{hipuxf3tesis-del-anova}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{H0:} La media de concentración de estroncio en todos los
+  cuerpos de agua es igual.
+\item
+  \textbf{H1:} Al menos una media de concentración de estroncio es
+  diferente.
+\end{itemize}
+
+\subsection{Cálculo del ANOVA}\label{cuxe1lculo-del-anova}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{bartlett.test}\NormalTok{(estroncio\_long}\SpecialCharTok{$}\NormalTok{Concentracion }\SpecialCharTok{\textasciitilde{}}\NormalTok{ estroncio\_long}\SpecialCharTok{$}\NormalTok{Cuerpo\_agua)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Bartlett test of homogeneity of variances
+## 
+## data:  estroncio_long$Concentracion by estroncio_long$Cuerpo_agua
+## Bartlett's K-squared = 0.63895, df = 4, p-value = 0.9586
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{estroncio\_long.aov }\OtherTok{\textless{}{-}} \FunctionTok{aov}\NormalTok{(estroncio\_long}\SpecialCharTok{$}\NormalTok{Concentracion }\SpecialCharTok{\textasciitilde{}}\NormalTok{ estroncio\_long}\SpecialCharTok{$}\NormalTok{Cuerpo\_agua) }
+\FunctionTok{summary}\NormalTok{(estroncio\_long.aov)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                            Df Sum Sq Mean Sq F value   Pr(>F)    
+## estroncio_long$Cuerpo_agua  4 2193.4   548.4   56.16 3.95e-12 ***
+## Residuals                  25  244.1     9.8                     
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(broom)}
+\NormalTok{anova }\OtherTok{\textless{}{-}} \FunctionTok{tidy}\NormalTok{(estroncio\_long.aov)}
+\FunctionTok{kable}\NormalTok{(anova, }\AttributeTok{caption =} \StringTok{"Resultados de análisis de varianza (ANOVA de una vía)"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.4091}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0455}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1364}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1364}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1515}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1212}}@{}}
+\caption{Resultados de análisis de varianza (ANOVA de una
+vía)}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+term
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+df
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+sumsq
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+meansq
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+statistic
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+p.value
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+term
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+df
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+sumsq
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+meansq
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+statistic
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+p.value
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+estroncio\_long\$Cuerpo\_agua & 4 & 2193.442 & 548.3605 & 56.15456 &
+0 \\
+Residuals & 25 & 244.130 & 9.7652 & NA & NA \\
+\end{longtable}
+
+\subsection{Gráfica de
+distribución}\label{gruxe1fica-de-distribuciuxf3n}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+
+\FunctionTok{ggplot}\NormalTok{(estroncio\_long, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ Cuerpo\_agua, }\AttributeTok{y =}\NormalTok{ Concentracion, }\AttributeTok{fill =}\NormalTok{ Cuerpo\_agua)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_violin}\NormalTok{(}\AttributeTok{trim =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{alpha =} \FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{geom\_boxplot}\NormalTok{(}\AttributeTok{width =} \FloatTok{0.1}\NormalTok{, }\AttributeTok{fill =} \StringTok{"white"}\NormalTok{, }\AttributeTok{outlier.shape =} \ConstantTok{NA}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{geom\_jitter}\NormalTok{(}\AttributeTok{width =} \FloatTok{0.1}\NormalTok{, }\AttributeTok{size =} \DecValTok{2}\NormalTok{, }\AttributeTok{alpha =} \FloatTok{0.7}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}
+    \AttributeTok{title =} \StringTok{"Concentraciones de estroncio en cuerpos de agua"}\NormalTok{,}
+    \AttributeTok{x =} \StringTok{"Cuerpo de agua"}\NormalTok{,}
+    \AttributeTok{y =} \StringTok{"Concentración (mg/ml)"}\NormalTok{,}
+    \AttributeTok{fill =} \StringTok{"Cuerpos de agua"}\NormalTok{,}
+    \AttributeTok{caption =} \StringTok{"Figura 1. Concentraciones de estroncio en cinco cuerpos de agua"}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{plot.caption =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\pandocbounded{\includegraphics[keepaspectratio]{Tarea_files/figure-latex/grafico-1.pdf}}
+
+\subsection{Prueba LSD}\label{prueba-lsd}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{LSD }\OtherTok{\textless{}{-}} \FunctionTok{sqrt}\NormalTok{((}\DecValTok{2}\SpecialCharTok{*}\FloatTok{9.8}\NormalTok{)}\SpecialCharTok{/}\DecValTok{6}\NormalTok{) }\SpecialCharTok{*} \FunctionTok{qt}\NormalTok{(}\FloatTok{0.975}\NormalTok{, }\DecValTok{25}\NormalTok{)}
+\NormalTok{LSD}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 3.722394
+\end{verbatim}
+
+\subsection{Comparación por pares con
+LSD:}\label{comparaciuxf3n-por-pares-con-lsd}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{resultados }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}
+  \AttributeTok{Comparacion =} \FunctionTok{c}\NormalTok{(}
+    \StringTok{"Grayson’s Pond vs Beaver Lake"}\NormalTok{,}
+    \StringTok{"Grayson’s Pond vs Angler’s Cove"}\NormalTok{,}
+    \StringTok{"Grayson’s Pond vs Appletree Lake"}\NormalTok{,}
+    \StringTok{"Grayson’s Pond vs Rock River"}\NormalTok{,}
+    \StringTok{"Beaver Lake vs Angler’s Cove"}\NormalTok{,}
+    \StringTok{"Beaver Lake vs Appletree Lake"}\NormalTok{,}
+    \StringTok{"Beaver Lake vs Rock River"}\NormalTok{,}
+    \StringTok{"Angler’s Cove vs Appletree Lake"}\NormalTok{,}
+    \StringTok{"Angler’s Cove vs Rock River"}\NormalTok{,}
+    \StringTok{"Appletree Lake vs Rock River"}
+\NormalTok{  ),}
+  \AttributeTok{Diferencia =} \FunctionTok{c}\NormalTok{(}\SpecialCharTok{{-}}\FloatTok{8.15}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{12.00}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{9.017}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{26.217}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{3.85}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{0.867}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{18.067}\NormalTok{, }\FloatTok{2.983}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{14.217}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{17.2}\NormalTok{),}
+  \AttributeTok{Significancia =} \FunctionTok{c}\NormalTok{(}\StringTok{"Significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{,}
+                    \StringTok{"Significativa"}\NormalTok{, }\StringTok{"No significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{,}
+                    \StringTok{"No significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{)}
+\NormalTok{)}
+\FunctionTok{kable}\NormalTok{(resultados, }\AttributeTok{caption =} \StringTok{"Resultados LSD de comparación entre pares de medias"}\NormalTok{,}
+      \AttributeTok{col.names =} \FunctionTok{c}\NormalTok{(}\StringTok{"Pares de medias"}\NormalTok{, }\StringTok{"Diferencia (mg/ml)"}\NormalTok{, }\StringTok{"Resultado LSD"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4783}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2754}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2464}}@{}}
+\caption{Resultados LSD de comparación entre pares de
+medias}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Pares de medias
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Diferencia (mg/ml)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Resultado LSD
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Pares de medias
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Diferencia (mg/ml)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Resultado LSD
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Grayson's Pond vs Beaver Lake & -8.150 & Significativa \\
+Grayson's Pond vs Angler's Cove & -12.000 & Significativa \\
+Grayson's Pond vs Appletree Lake & -9.017 & Significativa \\
+Grayson's Pond vs Rock River & -26.217 & Significativa \\
+Beaver Lake vs Angler's Cove & -3.850 & Significativa \\
+Beaver Lake vs Appletree Lake & -0.867 & No significativa \\
+Beaver Lake vs Rock River & -18.067 & Significativa \\
+Angler's Cove vs Appletree Lake & 2.983 & No significativa \\
+Angler's Cove vs Rock River & -14.217 & Significativa \\
+Appletree Lake vs Rock River & -17.200 & Significativa \\
+\end{longtable}
+
+\subsection{Prueba Tukey HSD}\label{prueba-tukey-hsd}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{PTukey }\OtherTok{\textless{}{-}} \FunctionTok{sqrt}\NormalTok{(}\FloatTok{9.8}\SpecialCharTok{/}\DecValTok{6}\NormalTok{) }\SpecialCharTok{*} \FunctionTok{qtukey}\NormalTok{(}\FloatTok{0.95}\NormalTok{, }\AttributeTok{nmeans =} \DecValTok{5}\NormalTok{, }\AttributeTok{df =} \DecValTok{25}\NormalTok{)}
+\NormalTok{PTukey}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 5.308078
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{TukeyHSD}\NormalTok{(estroncio\_long.aov)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   Tukey multiple comparisons of means
+##     95% family-wise confidence level
+## 
+## Fit: aov(formula = estroncio_long$Concentracion ~ estroncio_long$Cuerpo_agua)
+## 
+## $`estroncio_long$Cuerpo_agua`
+##                                      diff        lwr       upr     p adj
+## Appletree.Lake-Angler.s.Cove   -2.9833333  -8.281979  2.315312 0.4791100
+## Beaver.Lake-Angler.s.Cove      -3.8500000  -9.148645  1.448645 0.2376217
+## Grayson.s.Pond-Angler.s.Cove  -12.0000000 -17.298645 -6.701355 0.0000053
+## Rock.River-Angler.s.Cove       14.2166667   8.918021 19.515312 0.0000003
+## Beaver.Lake-Appletree.Lake     -0.8666667  -6.165312  4.431979 0.9884803
+## Grayson.s.Pond-Appletree.Lake  -9.0166667 -14.315312 -3.718021 0.0003339
+## Rock.River-Appletree.Lake      17.2000000  11.901355 22.498645 0.0000000
+## Grayson.s.Pond-Beaver.Lake     -8.1500000 -13.448645 -2.851355 0.0011293
+## Rock.River-Beaver.Lake         18.0666667  12.768021 23.365312 0.0000000
+## Rock.River-Grayson.s.Pond      26.2166667  20.918021 31.515312 0.0000000
+\end{verbatim}
+
+\subsection{Tabla de comparaciones con
+Tukey:}\label{tabla-de-comparaciones-con-tukey}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{resultadosHSD }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}
+  \AttributeTok{Comparacion =} \FunctionTok{c}\NormalTok{(}
+    \StringTok{"Grayson’s Pond vs Beaver Lake"}\NormalTok{,}
+    \StringTok{"Grayson’s Pond vs Angler’s Cove"}\NormalTok{,}
+    \StringTok{"Grayson’s Pond vs Appletree Lake"}\NormalTok{,}
+    \StringTok{"Grayson’s Pond vs Rock River"}\NormalTok{,}
+    \StringTok{"Beaver Lake vs Angler’s Cove"}\NormalTok{,}
+    \StringTok{"Beaver Lake vs Appletree Lake"}\NormalTok{,}
+    \StringTok{"Beaver Lake vs Rock River"}\NormalTok{,}
+    \StringTok{"Angler’s Cove vs Appletree Lake"}\NormalTok{,}
+    \StringTok{"Angler’s Cove vs Rock River"}\NormalTok{,}
+    \StringTok{"Appletree Lake vs Rock River"}
+\NormalTok{  ),}
+  \AttributeTok{Diferencia =} \FunctionTok{c}\NormalTok{(}\SpecialCharTok{{-}}\FloatTok{8.15}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{12.00}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{9.017}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{26.217}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{3.85}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{0.867}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{18.067}\NormalTok{, }\FloatTok{2.983}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{14.217}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{17.2}\NormalTok{),}
+  \AttributeTok{Significancia =} \FunctionTok{c}\NormalTok{(}\StringTok{"Significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{,}
+                    \StringTok{"No significativa"}\NormalTok{, }\StringTok{"No significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{,}
+                    \StringTok{"No significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{)}
+\NormalTok{)}
+\FunctionTok{kable}\NormalTok{(resultadosHSD, }\AttributeTok{caption =} \StringTok{"Resultados Tukey HSD de comparación entre pares de medias"}\NormalTok{,}
+      \AttributeTok{col.names =} \FunctionTok{c}\NormalTok{(}\StringTok{"Pares de medias"}\NormalTok{, }\StringTok{"Diferencia (mg/ml)"}\NormalTok{, }\StringTok{"Resultado Tukey HSD"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4583}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2639}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2778}}@{}}
+\caption{Resultados Tukey HSD de comparación entre pares de
+medias}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Pares de medias
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Diferencia (mg/ml)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Resultado Tukey HSD
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Pares de medias
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Diferencia (mg/ml)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Resultado Tukey HSD
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Grayson's Pond vs Beaver Lake & -8.150 & Significativa \\
+Grayson's Pond vs Angler's Cove & -12.000 & Significativa \\
+Grayson's Pond vs Appletree Lake & -9.017 & Significativa \\
+Grayson's Pond vs Rock River & -26.217 & Significativa \\
+Beaver Lake vs Angler's Cove & -3.850 & No significativa \\
+Beaver Lake vs Appletree Lake & -0.867 & No significativa \\
+Beaver Lake vs Rock River & -18.067 & Significativa \\
+Angler's Cove vs Appletree Lake & 2.983 & No significativa \\
+Angler's Cove vs Rock River & -14.217 & Significativa \\
+Appletree Lake vs Rock River & -17.200 & Significativa \\
+\end{longtable}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{5}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{2}\NormalTok{))}
+\FunctionTok{plot}\NormalTok{(}\FunctionTok{TukeyHSD}\NormalTok{(estroncio\_long.aov), }\AttributeTok{las =} \DecValTok{1}\NormalTok{, }\AttributeTok{cex.axis =} \FloatTok{0.7}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\pandocbounded{\includegraphics[keepaspectratio]{Tarea_files/figure-latex/plot-1.pdf}}
+\#\# Comparación LSD vs Tukey HSD
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{comparaciones }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}
+  \StringTok{"Grayson’s Pond vs Beaver Lake"}\NormalTok{,}
+  \StringTok{"Grayson’s Pond vs Angler’s Cove"}\NormalTok{,}
+  \StringTok{"Grayson’s Pond vs Appletree Lake"}\NormalTok{,}
+  \StringTok{"Grayson’s Pond vs Rock River"}\NormalTok{,}
+  \StringTok{"Beaver Lake vs Angler’s Cove"}\NormalTok{,}
+  \StringTok{"Beaver Lake vs Appletree Lake"}\NormalTok{,}
+  \StringTok{"Beaver Lake vs Rock River"}\NormalTok{,}
+  \StringTok{"Angler’s Cove vs Appletree Lake"}\NormalTok{,}
+  \StringTok{"Angler’s Cove vs Rock River"}\NormalTok{,}
+  \StringTok{"Appletree Lake vs Rock River"}
+\NormalTok{)}
+
+\NormalTok{diferencias }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\SpecialCharTok{{-}}\FloatTok{8.15}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{12.00}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{9.017}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{26.217}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{3.85}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{0.867}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{18.067}\NormalTok{, }\FloatTok{2.983}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{14.217}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{17.2}\NormalTok{)}
+
+\NormalTok{resultado\_LSD }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{,}
+                   \StringTok{"Significativa"}\NormalTok{, }\StringTok{"No significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{,}
+                   \StringTok{"No significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{)}
+
+\NormalTok{resultado\_Tukey }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{,}
+                     \StringTok{"No significativa"}\NormalTok{, }\StringTok{"No significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{,}
+                     \StringTok{"No significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{, }\StringTok{"Significativa"}\NormalTok{)}
+
+\NormalTok{resultadosComparados }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}
+  \StringTok{\textasciigrave{}}\AttributeTok{Pares de medias}\StringTok{\textasciigrave{}} \OtherTok{=}\NormalTok{ comparaciones,}
+  \StringTok{\textasciigrave{}}\AttributeTok{Diferencia (mg/ml)}\StringTok{\textasciigrave{}} \OtherTok{=}\NormalTok{ diferencias,}
+  \StringTok{\textasciigrave{}}\AttributeTok{Resultado LSD}\StringTok{\textasciigrave{}} \OtherTok{=}\NormalTok{ resultado\_LSD,}
+  \StringTok{\textasciigrave{}}\AttributeTok{Resultado Tukey HSD}\StringTok{\textasciigrave{}} \OtherTok{=}\NormalTok{ resultado\_Tukey}
+\NormalTok{)}
+
+\FunctionTok{kable}\NormalTok{(resultadosComparados,}
+      \AttributeTok{caption =} \StringTok{"Comparación de resultados LSD vs Tukey HSD entre pares de medias"}\NormalTok{,}
+      \AttributeTok{col.names =} \FunctionTok{c}\NormalTok{(}\StringTok{"Pares de medias"}\NormalTok{, }\StringTok{"Diferencia (mg/ml)"}\NormalTok{, }\StringTok{"Resultado LSD"}\NormalTok{, }\StringTok{"Resultado Tukey HSD"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3708}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2135}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1910}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2247}}@{}}
+\caption{Comparación de resultados LSD vs Tukey HSD entre pares de
+medias}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Pares de medias
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Diferencia (mg/ml)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Resultado LSD
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Resultado Tukey HSD
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Pares de medias
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Diferencia (mg/ml)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Resultado LSD
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Resultado Tukey HSD
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Grayson's Pond vs Beaver Lake & -8.150 & Significativa &
+Significativa \\
+Grayson's Pond vs Angler's Cove & -12.000 & Significativa &
+Significativa \\
+Grayson's Pond vs Appletree Lake & -9.017 & Significativa &
+Significativa \\
+Grayson's Pond vs Rock River & -26.217 & Significativa &
+Significativa \\
+Beaver Lake vs Angler's Cove & -3.850 & Significativa & No
+significativa \\
+Beaver Lake vs Appletree Lake & -0.867 & No significativa & No
+significativa \\
+Beaver Lake vs Rock River & -18.067 & Significativa & Significativa \\
+Angler's Cove vs Appletree Lake & 2.983 & No significativa & No
+significativa \\
+Angler's Cove vs Rock River & -14.217 & Significativa & Significativa \\
+Appletree Lake vs Rock River & -17.200 & Significativa &
+Significativa \\
+\end{longtable}
+
+\subsection{Interpretación ambiental}\label{interpretaciuxf3n-ambiental}
+
+¿Qué cuerpo de agua presenta las concentraciones más altas?
+
+-Grayson's Pond y Beaver Lake.
+
+¿Qué sitios no difieren entre sí?
+
+-Según LSD: Beaver Lake vs Appletree Lake y Angler's Cove vs Appletree
+Lake. -Según Tukey HSD: los mismos de LSD, más Beaver Lake vs Angler's
+Cove.
+
+¿Qué implicaciones podrían tener estas diferencias en la calidad del
+agua?
+
+-Las diferencias en las concentraciones de estroncio entre cuerpos de
+agua indican una variabilidad en la calidad. Los sitios con valores más
+altos podrían estar expuestos a contaminación local o condiciones
+específicas, lo que representa un riesgo potencial para la fauna y flora
+local. Asimismo, estas diferencias pueden tener implicaciones en el uso
+humano del agua (consumo, riego o recreación), por lo que los sitios con
+mayores concentraciones requieren mayor monitoreo y gestión ambiental.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\end{document}
