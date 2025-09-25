@@ -46,9 +46,13 @@ Material del curso de posgrado de Experimentación y Métodos Estadísticos en M
  + Aprender a crear una Gráfica de violín
  + Tarea: Comparación entre medias de concentración de estroncio en 5 lagos.
  
- **Semana 8** (25/09/2025) : Última semana Dr. Tagle
+ **Semana 8** (25/09/2025) : Regresión lineal simple 🌾🥐
+ + Tipos de regresión
+ + Supuestos 
+ + Modelo de regresión lineal simple
+ + Ejercicio 1: Base de datos de trigo y harina
  
- **Examen** (buscar fecha)
+ **Examen** (semana del 13 al 17 de octubre 2025)
  
  
 
