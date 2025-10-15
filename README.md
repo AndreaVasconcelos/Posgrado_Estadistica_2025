@@ -1,5 +1,5 @@
 # 📊 Posgrado en Estadística 2025  
-**Curso:** Experimentación y Métodos Estadísticos en MCF y DCMRN  
+**Curso:** Experimentación y Métodos Estadísticos en MCF y DMRN  
 **Profesor:** Dr. Marco Aurelio González-Tagle  
 **Estudiante:** Andrea Michelle Luna-Vasconcelos — Matrícula: 1950889  
 
@@ -16,10 +16,9 @@ Posgrado_Estadistica_2025/
 │
 ├── Scripts/ # Códigos R de cada práctica
 ├── Laboratorios/ # Laboratorios en PDF
-├── Tareas/ # Tareas en PDF
+├── Tareas/ # Tareas y ejercicios en PDF
 ├── data/ # Bases de datos utilizadas
-├── docs/ # README, capturas y materiales finales
-└── Proyecto_Estadistica.Rproj
+
 
 ## Contenido del curso
 
