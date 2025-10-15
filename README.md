@@ -78,7 +78,7 @@ A continuación se presenta la gráfica de contribuciones obtenida desde **Insig
 
 ![Gráfica de contribuciones](<img width="1200" height="512" alt="Commits over time" src="https://github.com/user-attachments/assets/08d4d2b8-7a89-4fa2-bd55-9db530c1b4ee" />)
 
-> La gráfica muestra la frecuencia de commits desde el 2 de agosto al 11 de octubre de 2025, reflejando el avance progresivo en la creación, actualización y documentación del repositorio.
+> La gráfica muestra la frecuencia de commits desde el 2 de agosto al 15 de octubre de 2025, reflejando el avance progresivo en la creación, actualización y documentación del repositorio.
 
 ---
 
