@@ -12,12 +12,13 @@ El repositorio demuestra el progreso en la realización de pruebas estadísticas
 ---
 
 ## 📂📋 Estructura general del repositorio
-Posgrado_Estadistica_2025/
-│
-├── Scripts/ # Códigos R de cada práctica
-├── Laboratorios/ # Laboratorios en PDF
-├── Tareas/ # Tareas y ejercicios en PDF
-├── data/ # Bases de datos utilizadas
+
+ **Posgrado_Estadistica_2025/**
+ + │
+ + ├── Scripts/ # Códigos R de cada práctica
+ + ├── Laboratorios/ # Laboratorios en PDF
+ + ├── Tareas/ # Tareas y ejercicios en PDF
+ + ├── data/ # Bases de datos utilizadas
 
 
 ## Contenido del curso
