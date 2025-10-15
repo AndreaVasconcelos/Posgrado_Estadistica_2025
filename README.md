@@ -1,3 +1,8 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
 # 📊 Posgrado en Estadística 2025  
 **Curso:** Experimentación y Métodos Estadísticos en MCF y DMRN  
 **Profesor:** Dr. Marco Aurelio González-Tagle  
@@ -12,12 +17,12 @@ El repositorio demuestra el progreso en la realización de pruebas estadísticas
 ---
 
 ## 📂📋 Estructura general del repositorio
-Posgrado_Estadistica_2025/
-│
-├── Scripts/ # Códigos R de cada práctica
-├── Laboratorios/ # Laboratorios en PDF
-├── Tareas/ # Tareas y ejercicios en PDF
-├── data/ # Bases de datos utilizadas
+ **Posgrado_Estadistica_2025/**
+ + │
+ + ├── Scripts/ # Códigos R de cada práctica
+ + ├── Laboratorios/ # Laboratorios en PDF
+ + ├── Tareas/ # Tareas y ejercicios en PDF
+ + ├── data/ # Bases de datos utilizadas
 
 
 ## Contenido del curso
