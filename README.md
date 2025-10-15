@@ -76,10 +76,7 @@ Posgrado_Estadistica_2025/
 
 A continuación se presenta la gráfica de contribuciones obtenida desde **Insights → Contributors**, donde se observa la constancia del trabajo semanal durante el desarrollo del curso.  
 
-![Gráfica de contribuciones](<img width="1200" height="512" alt="Commits over time" src="https://github.com/user-attachments/assets/23bfcaac-7a78-43c3-8c5a-6afa26115fd4" />
-)
-<img width="1200" height="512" alt="Commits over time" src="https://github.com/user-attachments/assets/bdf27cec-6ea4-49ce-902e-1df92754809d" />
-
+![Gráfica de contribuciones](<img width="1200" height="512" alt="Commits over time" src="https://github.com/user-attachments/assets/08d4d2b8-7a89-4fa2-bd55-9db530c1b4ee" />)
 
 > La gráfica muestra la frecuencia de commits desde el 2 de agosto al 11 de octubre de 2025, reflejando el avance progresivo en la creación, actualización y documentación del repositorio.
 
