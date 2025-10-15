@@ -1,7 +1,25 @@
-# Posgrado_Estadistica_2025
-Material del curso de posgrado de Experimentación y Métodos Estadísticos en MCF y DCMRN.
+# 📊 Posgrado en Estadística 2025  
+**Curso:** Experimentación y Métodos Estadísticos en MCF y DCMRN  
+**Profesor:** Dr. Marco Aurelio González-Tagle  
+**Estudiante:** Andrea Michelle Luna-Vasconcelos — Matrícula: 1950889  
 
- **Andrea Michelle Luna Vasconcelos 1950889**
+---
+
+## 🎯 Objetivo del repositorio  
+Este repositorio recopila los productos generados durante el curso *Experimentación y Métodos Estadísticos* de la maestría en Ciencias Forestales.  
+Su propósito es documentar los ejercicios, laboratorios y tareas desarrolladas en RStudio, aplicando los principios de estadística.
+El repositorio demuestra el progreso en la realización de pruebas estadísticas, creación de gráficas y análisis e intrepretación de los resultados.
+---
+
+## 📂📋 Estructura general del repositorio
+Posgrado_Estadistica_2025/
+│
+├── Scripts/ # Códigos R de cada práctica
+├── Laboratorios/ # Laboratorios en PDF
+├── Tareas/ # Tareas en PDF
+├── data/ # Bases de datos utilizadas
+├── docs/ # README, capturas y materiales finales
+└── Proyecto_Estadistica.Rproj
 
 ## Contenido del curso
 
@@ -32,13 +50,13 @@ Material del curso de posgrado de Experimentación y Métodos Estadísticos en M
  
  **Semana 5** (04/09/2025) : Pruebas de T 🤯😬😵
  + Media móvil
- + Ejemplos de prueba de T de muestras dependientes, independientes y de una muestra.
+ + Ejemplos de prueba de T de muestras dependientes, independientes y de una muestra
  + Asignación 3: Contraste de medias 
  + Trabajar con la base de datos Iris
  
- **Semana 6** (11/09/2025) :  ✈️
- + 
- + 
+ **Semana 6** (11/09/2025) :  Compliación de lo aprendido ✈️
+ + Repaso general de los temas vistos anteriormente
+ + Trabajo en diversas tareas del curso
  
  **Semana 7** (18/09/2025) : Análisis de varianzas 🫥🚀👾
  + ANOVA
@@ -55,4 +73,16 @@ Material del curso de posgrado de Experimentación y Métodos Estadísticos en M
  **Examen** (semana del 13 al 17 de octubre 2025)
  
  
+## 📊 Evidencia de trabajo en GitHub  
 
+A continuación se presenta la gráfica de contribuciones obtenida desde **Insights → Contributors**, donde se observa la constancia del trabajo semanal durante el desarrollo del curso.  
+
+![Gráfica de contribuciones](C:/Repositorio GitHub/Posgrado_Estadistica_2025/Commits over time.png)
+
+
+> La gráfica muestra la frecuencia de commits desde el 2 de agosto al 11 de octubre de 2025, reflejando el avance progresivo en la creación, actualización y documentación del repositorio.
+
+---
+
+📅 *Última actualización:* Octubre 2025  
+🎓 *Repositorio elaborado por Andrea Michelle Luna Vasconcelos*
