@@ -78,6 +78,7 @@ A continuación se presenta la gráfica de contribuciones obtenida desde **Insig
 
 ![Gráfica de contribuciones](C:/Repositorio GitHub/Posgrado_Estadistica_2025/Commits over time.png)
 <img width="1200" height="512" alt="Commits over time" src="https://github.com/user-attachments/assets/bdf27cec-6ea4-49ce-902e-1df92754809d" />
+utils::browseURL(C:/Repositorio GitHub/Posgrado_Estadistica_2025/Commits over time.png)
 
 
 > La gráfica muestra la frecuencia de commits desde el 2 de agosto al 11 de octubre de 2025, reflejando el avance progresivo en la creación, actualización y documentación del repositorio.
