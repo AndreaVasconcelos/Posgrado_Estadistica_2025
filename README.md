@@ -38,7 +38,7 @@ El repositorio demuestra el progreso en la realización de pruebas estadísticas
  **Semana 3** (21/08/2025) : Laboratorio 2 😓🤯
  + Cargar base de datos de la web (base de datos Senasica)
  + Creación de gráficas, específicamente boxplot personalizada (con la base de datos Temperatura)
- + Aprendimos a compliar en HTML y PDF
+ + Aprendimos a compilar en HTML y PDF
  + Continuación y final de Laboratorio 2
  
  **Semana 4** (28/08/2025) : Script 4 🤠🍳
