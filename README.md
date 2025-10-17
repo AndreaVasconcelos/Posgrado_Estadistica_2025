@@ -17,8 +17,13 @@ El repositorio demuestra el progreso en la realización de pruebas estadísticas
 ---
 
 ## 📂📋 Estructura general del repositorio
+<<<<<<< HEAD
  **Posgrado_Estadistica_2025/**
  + │
+=======
+
+ **Posgrado_Estadistica_2025/**
+>>>>>>> b2c27b94d7c41c77aa74eb788cb7ae008094f154
  + ├── Scripts/ # Códigos R de cada práctica
  + ├── Laboratorios/ # Laboratorios en PDF
  + ├── Tareas/ # Tareas y ejercicios en PDF
@@ -43,7 +48,7 @@ El repositorio demuestra el progreso en la realización de pruebas estadísticas
  **Semana 3** (21/08/2025) : Laboratorio 2 😓🤯
  + Cargar base de datos de la web (base de datos Senasica)
  + Creación de gráficas, específicamente boxplot personalizada (con la base de datos Temperatura)
- + Aprendimos a compliar en HTML y PDF
+ + Aprendimos a compilar en HTML y PDF
  + Continuación y final de Laboratorio 2
  
  **Semana 4** (28/08/2025) : Script 4 🤠🍳
@@ -81,10 +86,13 @@ El repositorio demuestra el progreso en la realización de pruebas estadísticas
 
 A continuación se presenta la gráfica de contribuciones obtenida desde **Insights → Contributors**, donde se observa la constancia del trabajo semanal durante el desarrollo del curso.  
 
+<<<<<<< HEAD
 ![Commits over time](Commits_over_time/Commits_over_time.png)
+=======
+![Gráfica de contribuciones](<img width="1200" height="512" alt="Commits over time" src="https://github.com/user-attachments/assets/08d4d2b8-7a89-4fa2-bd55-9db530c1b4ee" />)
+>>>>>>> b2c27b94d7c41c77aa74eb788cb7ae008094f154
 
-
-> La gráfica muestra la frecuencia de commits desde el 2 de agosto al 11 de octubre de 2025, reflejando el avance progresivo en la creación, actualización y documentación del repositorio.
+> La gráfica muestra la frecuencia de commits desde el 2 de agosto al 15 de octubre de 2025, reflejando el avance progresivo en la creación, actualización y documentación del repositorio.
 
 ---
 
