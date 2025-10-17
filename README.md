@@ -81,7 +81,7 @@ El repositorio demuestra el progreso en la realización de pruebas estadísticas
 
 A continuación se presenta la gráfica de contribuciones obtenida desde **Insights → Contributors**, donde se observa la constancia del trabajo semanal durante el desarrollo del curso.  
 
-![Commits over time](Commits over time.png)
+![Commits over time](Commits_over_time/Commits_over_time.png)
 
 
 > La gráfica muestra la frecuencia de commits desde el 2 de agosto al 11 de octubre de 2025, reflejando el avance progresivo en la creación, actualización y documentación del repositorio.
